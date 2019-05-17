@@ -19,15 +19,24 @@ class RegistrationUsername extends Component {
   }
 
   checkForErrors = () => {
-    let error = false;
     const uppercase = /[A-Z]+/;
     const lowercase = /[a-z]+/;
     const digit = /[0-9]+/;
+    const specialCharacter = /[!@#$%^&*)¤"(\\+=._-]+/;
 
-    if (this.state.username.length > 6) error = true;
-    if (!this.state.username.match(uppercase)) console.log('no uppercase letters');
-    if (!this.state.username.match(lowercase)) console.log('no lowercase letters');
-    if (!this.state.username.match(digit)) console.log('no digits');
+    const usernameError = this.state.username.length >= 6;
+    const uppercaseError = this.state.username.match(uppercase) ? true : false;
+    const lowercaseError = this.state.username.match(lowercase) ? true : false;
+    const digitError = this.state.username.match(digit) ? true : false;
+    const specialCharacterError = this.state.username.match(specialCharacter) ? true : false;
+
+    if (usernameError && uppercaseError && lowercaseError && digitError && specialCharacterError) {
+      this.setState({ error: false });
+    } else {
+      this.setState({ error: true });
+    }
+
+    console.log(usernameError, uppercaseError, lowercaseError, digitError, specialCharacterError);
   }
 
   render() {
@@ -42,7 +51,7 @@ class RegistrationUsername extends Component {
           onChange={this.handleInput}
           onBlur={this.blur}
         />
-        <h5 id="error">{this.state.error ? 'fucking error mate' : null}</h5>
+        <h5 className="error">{this.state.error ? 'fucking error mate' : null}</h5>
       </div>
     );
   }

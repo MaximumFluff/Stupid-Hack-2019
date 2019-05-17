@@ -3,6 +3,8 @@ import './App.css';
 
 import RegistrationPhonenumber from './components/RegistrationPhonenumber';
 import RegistrationUsername from './components/RegistrationUsername';
+import RegistrationPassword from './components/RegistrationPassword';
+import LoginPassword from './components/LoginPassword';
 
 class App extends React.Component {
   render() {
@@ -10,6 +12,8 @@ class App extends React.Component {
       <div className="App">
         <RegistrationPhonenumber />
         <RegistrationUsername />
+        <RegistrationPassword />
+        <LoginPassword />
       </div>
     );
   }
