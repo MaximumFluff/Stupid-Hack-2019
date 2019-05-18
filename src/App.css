@@ -1,33 +1,87 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid black;
+  padding: 1em;
+  margin: 2em;
+}
+
+.Component > * {
+  margin: auto;
+}
+
+#incrementingNumber {
+  font-size: 5em;
+  width: 1em;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+}
+
+#incrementingNumber:hover {
+  cursor: pointer;
+}
+
+#phoneNumber {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#phoneNumberReset {
+  width: 50%;
+  margin: auto;
+  margin-top: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.error {
+  color: red;
 }
 
-.App-link {
-  color: #61dafb;
+.success {
+  color: green;
+  font-size: 1.5em;
+}
+/* Couldn't be fucked trying to figure out custom checkbox styling so found a generator online  */
+input[type=checkbox].css-checkbox {
+  position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left:30px;
+  height:125px; 
+  display:inline-block;
+  line-height:25px;
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  font-size:25px;
+  vertical-align:middle;
+  cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -25px;
+}
+label.css-label {
+background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_391ce065f36b1460c4845fa9b5173fba.png);
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
