@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Email extends React.Component {
+export default class Email extends React.Component {
   constructor(props) {
     super(props)
     this.state = { typed: "" }

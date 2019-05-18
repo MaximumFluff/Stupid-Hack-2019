@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Username = () => (
+export default Username = () => (
   <div>
     <input type="password" />
   </div>

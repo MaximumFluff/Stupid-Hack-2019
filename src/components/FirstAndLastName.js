@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FirstAndLastName extends React.Component {
+export default class FirstAndLastName extends React.Component {
   
   onChange = event => {
     const firstLetter = event.target.value.charAt(0);
