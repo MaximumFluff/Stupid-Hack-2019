@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FirstAndLastName extends React.Component {
+export default class FirstAndLastName extends React.Component {
   
   onChange = event => {
     const firstLetter = event.target.value.charAt(0);
@@ -14,7 +14,7 @@ class FirstAndLastName extends React.Component {
   
   render() {
     return (
-      <div>
+      <div style={{flexDirection: 'column'}}>
         <input name="first" type="text" onChange={this.onChange}/>
         <input name="last" type="text" onChange={this.onChange}/>
       </div>

@@ -5,3 +5,5 @@ const Gender = () => (
     <input type="checkbox" name="gender" value="Yes" />
   </div>
 )
+
+export default Gender;
