@@ -1,40 +1,60 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.Component {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid black;
+  padding: 1em;
+  margin: 2em;
+}
+
+.Component > * {
+  margin: auto;
+}
+
+#incrementingNumber {
+  font-size: 5em;
+  width: 1em;
+  margin: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#incrementingNumber:hover {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#phoneNumber {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+#phoneNumberReset {
+  width: 50%;
+  margin: auto;
+  margin-top: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  color: red;
 }
 
+.success {
+  color: green;
+  font-size: 1.5em;
+}
 /* Couldn't be fucked trying to figure out custom checkbox styling so found a generator online  */
 input[type=checkbox].css-checkbox {
   position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
