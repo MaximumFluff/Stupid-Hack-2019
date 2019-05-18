@@ -1,5 +1,5 @@
 # Stupid Hack 2019 Project
-## Developed by Janne Johannson, Adrian Wilcock, Alex Jacobs & Trevor Hurt
+## Developed by Janne Johansson, Adrian Wilcock, Alex Jacobs & Trevor Hurt
 
 ### Description
 Many businesses require login pages for their websites, but they don't want to pay web developers to build it, so we developed an easy to use template for login pages! guaranteed easy to use.
