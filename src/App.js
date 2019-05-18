@@ -44,6 +44,10 @@ class App extends React.Component {
             <Input id="name" type="text" />
           </FormControl>
 
+          <FormControl>
+          <Checkbox label="Gender"/>
+        </FormControl>
+
           <FormControl margin="normal" fullWidth>
             <InputLabel htmlFor="name">Username</InputLabel>
             <Input id="name" type="text" />
@@ -61,12 +65,9 @@ class App extends React.Component {
             <Input id="phonenumber" type="phonenumber" />
           </FormControl>
 
-        <FormControl>
-          <Checkbox label="Gender"/>
-        </FormControl>
 
           <Button variant="contained" color="primary" size="medium">
-            Send
+            Register
           </Button>
 
         </form>
