@@ -18,11 +18,7 @@ export default class Email extends React.Component {
 
   render() {
     return(
-      <div style={{
-        /* Insert styles here later PogChamp  */
-        width: 400,
-        height: 200,
-      }}>
+      <div>
         <input type="text" onChange={this.onChange} />
       </div>
     )

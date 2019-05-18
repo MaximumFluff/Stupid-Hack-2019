@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .App-logo {
@@ -39,7 +42,7 @@ input[type=checkbox].css-checkbox {
 
 input[type=checkbox].css-checkbox + label.css-label {
   padding-left:30px;
-  height:25px; 
+  height:125px; 
   display:inline-block;
   line-height:25px;
   background-repeat:no-repeat;

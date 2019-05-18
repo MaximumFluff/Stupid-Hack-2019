@@ -14,7 +14,7 @@ export default class FirstAndLastName extends React.Component {
   
   render() {
     return (
-      <div>
+      <div style={{flexDirection: 'column'}}>
         <input name="first" type="text" onChange={this.onChange}/>
         <input name="last" type="text" onChange={this.onChange}/>
       </div>
