@@ -72,7 +72,7 @@ class LoginPassword extends Component {
         <input name="password" type="color" onChange={this.handleInput} />
         <input type="button" value="LOGIN" onClick={this.login} />
         {this.state.error ? <p className="error">{this.state.errorText}</p> : null}
-        {this.state.success ? <p className="success">YOU DID IT!</p> : null}
+        {this.state.success ? <p className="success">YOU DID IT!/* Implement rest of the website later */</p> : null}
         <Forgot />
       </div>
     );

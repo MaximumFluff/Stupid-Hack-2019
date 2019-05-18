@@ -14,7 +14,7 @@ import LoginPassword from './components/LoginPassword';
 class App extends React.Component {
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "center", margin: 20, padding: 20 }}>
+      <div style={{ display: "flex", justifyContent: "right", margin: 20, padding: 20 }}>
         <Form />
       </div>
     );

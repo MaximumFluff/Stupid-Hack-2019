@@ -84,7 +84,7 @@ class RegisTration extends React.Component {
  handleCityInput = (e) => {
    this.setState({ [e.target.name]: e.target.value }, () => {
     const inputString = this.state.city;
-    if (inputString !== "Yorkshire") {
+    if (inputString !== "Isengard") {
       this.setState({ cityError: true })
     }
     else {
@@ -245,37 +245,40 @@ class LogIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      storedUsername: 'Username69!',
+      username: '',
+      usernameError: false,
+      usernameErrorMessage: 'nah mate',
     };
   }
+
+  checkUsername = (e) => {
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      if (this.state.username !== this.state.storedUsername) {
+        this.setState({ usernameError: true })
+      } else {
+        this.setState({ usernameError: false });
+      }
+    })
+  }
+
   render() {
     return (
       <div style={{ display: "flex", justifyContent: "center", margin: 20, padding: 20 }}>
         <div>
-          <form style={{ width: "50%" }}>
-            <h1>LoGiN</h1>
-            <TextField
-            label="Username"
-            error={this.state.userNameError}
-            helperText={this.state.firstNameError ? this.state.firstNameErrorMessage : ''}
-            type="text"
-            margin="normal"
-            name="userName"
-          />
-
-            <TextField
-            id="standard-password-input"
-            label="Password"
-            error={this.state.passwordError}
-            helperText={this.state.passwordErrorMessage}
-            type="password"
-            autoComplete="current-password"
-            margin="normal"
-            name="password"
-          />
-          <LoginPassword />
-
-            <Button variant="contained" color="primary" size="medium">LoGIn m8</Button>
+          <form style={{ width: "100%" }}>
+            <h1>Just LoGiN 4head</h1>
+            <TextField style={{border: 'none', borderStyle: 'dotted dashed dotted inset'}}
+              label="Username"
+              error={this.state.usernameError}
+              helperText={this.state.usernameError ? this.state.usernameErrorMessage : ''}
+              type="password"
+              margin="normal"
+              name="username"
+              value={this.state.username}
+              onChange={this.checkUsername}
+            />
+            <LoginPassword />
           </form>
         </div>
       </div>
