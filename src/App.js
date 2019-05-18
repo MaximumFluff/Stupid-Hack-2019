@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Form from './components/Form';
 import Forgot from './components/Forgot';
 import FirstAndLastName from './components/FirstAndLastName';
 import Username from './components/Username';
@@ -13,14 +14,12 @@ import LoginPassword from './components/LoginPassword';
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <RegistrationPhonenumber />
-        <RegistrationUsername />
-        <RegistrationPassword />
-        <LoginPassword />
+      <div style={{ display: "flex", justifyContent: "center", margin: 20, padding: 20 }}>
+        <Form />
       </div>
     );
   }
 }
+
 
 export default App;
