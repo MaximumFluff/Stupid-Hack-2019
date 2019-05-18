@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Forgot from './Forgot';
 
 class LoginPassword extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userPassword: '#000000',
+      userPassword: '#ffffff',
       password: '#000000',
       wrongAnwers: 0,
       encouragements: [
@@ -66,12 +67,13 @@ class LoginPassword extends Component {
 
   render() {
     return (
-      <div className="Component">
+      <div style={{  }}>
         <p>{this.state.password}</p>
         <input name="password" type="color" onChange={this.handleInput} />
         <input type="button" value="LOGIN" onClick={this.login} />
         {this.state.error ? <p className="error">{this.state.errorText}</p> : null}
         {this.state.success ? <p className="success">YOU DID IT!</p> : null}
+        <Forgot />
       </div>
     );
   }

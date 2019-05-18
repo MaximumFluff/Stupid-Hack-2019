@@ -12,7 +12,7 @@ export default class Forgot extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.notify}>Notify !</button>
+        <button onClick={this.notify}>Forgot password UwU :(</button>
         <ToastContainer />
       </div>
     );

@@ -40,9 +40,9 @@ class RegistrationPhonenumber extends React.Component {
 
   render() {
     return (
-      <div className="Component">
+      <div className="registrationPhonenumber">
         <p id="incrementingNumber">{this.state.number}</p>
-        <input disabled type="text" id="phoneNumber" name="phoneNumber" value={this.state.phoneNumber} />
+        <input style={{ fontSize: "25px", width: "50%", margin: "auto" }} disabled type="text" id="phoneNumber" name="phoneNumber" value={this.state.phoneNumber} />
         <input id="phoneNumberReset" type="button" value="TRY AGAIN" onClick={this.reset} />
       </div>
     );

@@ -85,3 +85,17 @@ background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_391ce065f36
 -ms-user-select: none;
 user-select: none;
 }
+
+.registrationPassword {
+  display: flex;
+  align-items: center;
+}
+
+.registrationPassword > * {
+  margin: 0.5em;
+}
+
+.registrationPhonenumber {
+  display: flex;
+  flex-direction: column;
+}
