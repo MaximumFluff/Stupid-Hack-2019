@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class LoginPassword extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userPassword: '#ffffff',
+      userPassword: '#000000',
       password: '#000000',
-      guessesWrong: 0,
+      wrongAnwers: 0,
       encouragements: [
         'try again',
         'try harder',
@@ -19,17 +20,20 @@ class LoginPassword extends Component {
   }
 
   handleInput = (e) => {
-    console.log(e.target.value);
     this.setState({ [e.target.name]: e.target.value });
   }
 
   login = () => {
     if (this.state.userPassword !== this.state.password && !this.state.success) {
-      let guessesWrong = this.state.guessesWrong;
-      const encouragement = this.state.encouragements[guessesWrong];
-      if (guessesWrong < this.state.encouragements.length-1) guessesWrong++;
+      let wrongAnwers = this.state.wrongAnwers;
+      const encouragement = this.state.encouragements[wrongAnwers];
+      if (wrongAnwers <= this.state.encouragements.length-1) {
+        wrongAnwers++;;
+      } else {
+        this.suggestion();
+      }
       this.setState({
-        guessesWrong,
+        wrongAnwers,
         errorText: encouragement,
         error: true,
       });
@@ -40,7 +44,24 @@ class LoginPassword extends Component {
   }
 
   suggestion = () => {
-    'http://thecolorapi.com/id?hex=ffffff&format=json'
+    const color = this.state.userPassword.slice(1);
+    console.log(color);
+    
+    const request = {
+      method: 'get',
+      url: `http://localhost:3001?hex=${color}`
+    };
+    
+    axios(request)
+      .then(response => {
+        console.log(response.data);
+        // We take security very seriously and that is why we give a vague hint of the color. See below.
+        const hint = `${response.data}ish`;
+        
+        this.setState({ errorText: `Hint: it's ${hint}` });
+      })
+      .catch(error => console.log(error));
+
   }
 
   render() {
